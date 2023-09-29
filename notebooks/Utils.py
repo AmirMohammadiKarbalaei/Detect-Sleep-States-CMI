@@ -19,7 +19,13 @@ def clean_df(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def transform_and_rename_dataframe(dataframe, id_map_dataframe, merge_on, drop_columns, rename_columns):
+def transform_and_rename_dataframe(
+    dataframe: pd.DataFrame,
+    id_map_dataframe: pd.DataFrame,
+    merge_on: str,
+    drop_columns: list[str],
+    rename_columns: dict[str]
+) -> pd.DataFrame:
     """
     Transform and rename a DataFrame by merging it with another DataFrame, dropping specified columns,
     and renaming columns.
