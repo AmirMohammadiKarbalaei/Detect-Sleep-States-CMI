@@ -1,5 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
+from colorama import Fore, Style, init
+from pprint import pprint
+
 
 def plot(data,graph_type:str,Title:str):
     plt.figure(figsize=(12, 8))
@@ -45,3 +48,5 @@ def transform_and_rename_dataframe(
     transformed_dataframe = transformed_dataframe.rename(columns=rename_columns)
 
     return transformed_dataframe
+def CPrint(text: str, colour=Fore.BLUE, style=Style.BRIGHT):
+    print(style+colour+text+Style.RESET_ALL)
