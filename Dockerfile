@@ -21,8 +21,3 @@ COPY . .
 
 EXPOSE ${JUPYTER_PORT}
 CMD ["jupyter", "notebook","--port","8888","--no-browser","--ip=0.0.0.0","--notebook-dir","./notebooks"]
-
-# RUN echo "#!/bin/bash\njupyter notebook --port 8888 --no-browser --notebook-dir /app/notebooks /app/notebooks/eda-1.0.ipynb" > start_notebook.sh
-# RUN chmod +x start_notebook.sh
-
-# CMD ["./start_notebook.sh"]
