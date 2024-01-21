@@ -22,4 +22,4 @@ The development of a predictive model has involved the implementation of the fol
 ### Feature Engineering: 
 * Lag features have been incorporated for Enmo and Angle-z to introduce a temporal element. Additionally, various features such as "Hour of day," "Day of Month," and others have been appended to the dataset. The significance of these features has been assessed using SHAP (Shapley Additive explanations).
 ### Model Implementation: 
-* The Random Forest and HistGradientBoostingClassifier algorithms were employed for the model. Upon evaluation, it was determined that Random Forest outperformed HistGradientBoostingClassifier, achieving approximately 75% accuracy.
+* A Random Forest and HistGradientBoostingClassifier algorithm were employed for the model. Upon evaluation, it was determined that Random Forest outperformed HistGradientBoostingClassifier, achieving approximately 75% accuracy.
