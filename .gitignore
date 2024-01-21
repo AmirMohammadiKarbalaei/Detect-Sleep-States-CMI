@@ -1,1 +1,3 @@
-/Detect-Sleep-States-CMI-data/
+/data/raw/*
+/data/processed/*
+/models/*

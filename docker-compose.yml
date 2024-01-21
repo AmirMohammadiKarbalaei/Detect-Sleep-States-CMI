@@ -1,0 +1,24 @@
+version: '3'
+services:
+  jupyter:
+    build:
+      dockerfile: Dockerfile
+      args: 
+        JUPYTER_USERNAME: ${JUPYTER_USERNAME-amoha}
+        UID: ${UID-1000}
+        GID: ${GID-1000}
+    image: workspace/jupyter
+    user: ${UID-1000}:${GID-1000}
+    command: jupyter notebook --port 8888 --no-browser --ip=0.0.0.0 --notebook-dir ./notebooks
+    container_name: dss-jupyter
+    ports:
+      - "${JUPYTER_PORT-8888}:8888"
+    environment:
+      JUPYTER_PORT: ${JUPYTER_PORT-8888}
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN-secret}
+      JUPYTER_ENABLE_LAB: ${JUPYTER_ENABLE_LAB-yes}
+      JUPYTER_USERNAME: ${JUPYTER_USERNAME-amoha}
+    volumes:
+      - ./notebooks:/home/${JUPYTER_USERNAME}/notebooks:rw
+      - ./data:/home/${JUPYTER_USERNAME}/data:rw
+    
