@@ -18,7 +18,7 @@ The dataset comprises about 500 multi-day recordings of wrist-worn accelerometer
 The development of a predictive model has involved the implementation of the following procedural steps:
 
 ### Exploratory Data Analysis (EDA): 
-*The dataset has undergone thorough cleaning, and a continuous data series, devoid of any gaps, has been selected for model training.
+* The dataset has undergone thorough cleaning, and a continuous data series, devoid of any gaps, has been selected for model training.
 ### Feature Engineering: 
 * Lag features have been incorporated for Enmo and Angle-z to introduce a temporal element. Additionally, various features such as "Hour of day," "Day of Month," and others have been appended to the dataset. The significance of these features has been assessed using SHAP (Shapley Additive explanations).
 ### Model Implementation: 
